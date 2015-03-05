@@ -1,0 +1,96 @@
+body{
+  font-family: sans-serif;
+  background-color: #fdfdfd;
+}
+
+#query{
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+}
+
+#smiley{
+  position: relative;
+  top: -1.6em;
+  left: .75em;
+  height: 1em;
+  width: 1em;
+  display: block;
+  color: gray;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+#smiley.rotate{
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+input{
+  font-size: 1em;
+  padding: .5em 0;
+  text-indent: 10%;
+  width: 396px;
+  display: block;
+  margin: .85em auto 0;
+  border-radius: 3px;
+  border-width: 1px;
+  border-color: #d5d5d5;
+}
+
+ul{
+  padding: 0;
+  margin: 0 auto;
+  width: 400px;
+  list-style-type: none;
+}
+
+ul li{
+  margin: 0;
+  padding: .8em 10% .8em 10%;
+  border-width: 0px 1px;
+}
+
+ul li:nth-child(even){
+  border: 1px solid #efefef;
+  border-top: none;
+  border-bottom: none;
+  background-color: white;
+}
+
+ul li:nth-child(odd){
+  background-color: #efefef;
+  border: 1px solid #efefef;
+  border-width: 0px 1px;
+}
+
+ul li:only-child { /* for when there's one result */
+  border-radius: 4px !important;
+  border-width: 0px 1px !important;
+}
+
+ul li:first-child{
+  border-radius: 4px 4px 0 0;
+}
+
+ul li:last-child{
+  border: 1px solid #efefef;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+}
+
+ul li:hover{
+  background-color: #e5e5e5;
+}
+
+ul li span{
+  display: inline-block;
+  width: 20%;
+}
+
+ul li span, ul li em{
+  color: #333; /* don't use black */
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Internet Acronym Filter</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div ng-app="acro">
+    <div ng-controller="queryController">
+      <span id="query" model="query" smiley-input></span>
+      <ul>
+        <li ng-repeat="arco in arcoKeys | filter:query">
+          <span>{{arco}}</span> <em>{{arcos[arco]}}</em>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src='http://codepen.io/assets/libs/fullpage/angular.js'></script>
+  <script src="js/index.js"></script>
+
+</body>
+</html>
