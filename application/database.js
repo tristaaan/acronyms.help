@@ -4,9 +4,9 @@ var Schema = mongoose.Schema;
 mongoose.connect('mongodb://localhost/db');
 
 var acronymSchema = new Schema({
-  acronym:  String,
+  acronym: String,
   meaning: String,
-  type:   String
+  type: String
 });
 
 var acronymModel = mongoose.model('Acronym', acronymSchema)
