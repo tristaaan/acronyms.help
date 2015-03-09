@@ -14,15 +14,19 @@ app.factory('fetchService', function($http) {
 });
 
 app.controller('queryController', function($scope, fetchService){
-  $scope.$watch('query', function(newVal){
+  // watch $scope.query, if the first letter changes fetch from the api.
+  // any letter after the first can be filtered from the previously fetched results
+  // clear the results if $scope.query.length == 0
+  $scope.$watch('query', function(newVal, oldVal){
     newVal = newVal || '';
-    if (newVal.length > 0){
+    oldVal = oldVal || '';
+    if (newVal.length == 0){
+      $scope.acros = [];
+    }
+    else if (newVal.length > 0 && newVal[0] != oldVal[0]){
       fetchService.fetch(newVal).success(function(res){
         $scope.acros = res;
       });
-    }
-    else{
-      $scope.acros = [];
     }
   });
 });

@@ -10,14 +10,19 @@ app.get('/', function(req, res){
 });
 
 app.get('/fetch/:expr', function(req, res){
-  var expression = req.params.expr;
-  var hasOnlyLetters = /[\W]/;
-  if (hasOnlyLetters.test(expression)){
+  var expression = req.params.expr.trim();
+  var hasOnlyAlphanumeric = /[\W]/;
+  if (hasOnlyAlphanumeric.test(expression)){
     res.send([]);
   }
   else{
-    database.find({acronym: new RegExp('^'+expression)}, function(error, data){
-      res.send(data);
+    database.find({acronym: new RegExp('^'+expression, 'i')}, function(error, data){
+      if(error){
+        console.log(error);
+      }
+      else{
+        res.send(data);
+      }
     });
   }
 });
