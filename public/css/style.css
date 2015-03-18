@@ -54,6 +54,34 @@ ul li{
   border-width: 0px 1px;
 }
 
+.acro-repeat-animate {
+  list-style:none;
+  box-sizing:border-box;
+}
+
+.acro-repeat-animate.ng-move,
+.acro-repeat-animate.ng-enter,
+.acro-repeat-animate.ng-leave {
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+
+.acro-repeat-animate.ng-leave.ng-leave-active,
+.acro-repeat-animate.ng-move,
+.acro-repeat-animate.ng-enter {
+  opacity:0;
+  padding: 0 10% 0 10%;
+  max-height:0;
+}
+
+.acro-repeat-animate.ng-leave,
+.acro-repeat-animate.ng-move.ng-move-active,
+.acro-repeat-animate.ng-enter.ng-enter-active {
+  opacity:1;
+  padding: .8em 10% .8em 10%;
+  max-height:40px;
+}
+
 ul li:nth-child(even){
   border: 1px solid #efefef;
   border-top: none;

@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('acro', []);
+var app = angular.module('acroSearch', ['ngAnimate']);
 
 app.factory('fetchService', function($http) {
   var my = {};
