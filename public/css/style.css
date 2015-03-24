@@ -82,6 +82,10 @@ ul li{
   max-height:40px;
 }
 
+.acronym, .meaning{
+  text-transform: lowercase;
+}
+
 ul li:nth-child(even){
   border: 1px solid #efefef;
   border-top: none;
@@ -121,4 +125,10 @@ ul li span{
 
 ul li span, ul li em{
   color: #333; /* don't use black */
+}
+
+footer{
+  position: fixed;
+  bottom: 3px;
+  right: 5px;
 }

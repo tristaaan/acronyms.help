@@ -1,7 +1,9 @@
 var express = require('express');
 var database = require('./database');
+var limitedArray = require('./limitedArray');
 
 var app = express();
+var limArray = limitedArray(8);
 
 app.use(express.static(__dirname + '/../public'));
 
@@ -22,9 +24,14 @@ app.get('/fetch/:expr', function(req, res){
       }
       else{
         res.send(data);
+        limArray.push(data[Math.floor(Math.random()*data.length)]);
       }
     });
   }
+});
+
+app.get('/recents', function(req, res){
+  res.send(limArray.arr);
 });
 
 module.exports = app;

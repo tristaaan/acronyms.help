@@ -10,10 +10,22 @@ app.factory('fetchService', function($http) {
       url: '/fetch/' + query
     });
   }
+
+  my.recents = function(){
+    return $http({
+      method: 'GET', 
+      url: '/recents'
+    });
+  }
   return my;
 });
 
 app.controller('queryController', function($scope, fetchService){
+
+  fetchService.recents().success(function(res){
+    $scope.acros = res;
+  });
+  
   // watch $scope.query, if the first letter changes fetch from the api.
   // any letter after the first can be filtered from the previously fetched results
   // clear the results if $scope.query.length == 0
