@@ -1,14 +1,62 @@
+{"acronym": "brb", "meaning": "be right back", "type":"internet"}
+{"acronym": "btw", "meaning": "by the way", "type":"internet"}
+{"acronym": "cu", "meaning": "see you (later)", "type":"internet"}
+{"acronym": "g2g", "meaning": "good to go", "type":"internet"}
+{"acronym": "gtg", "meaning": "got to go", "type":"internet"}
+{"acronym": "idk", "meaning": "i don't know", "type":"internet"}
+{"acronym": "iirc", "meaning": "if i read correctly", "type":"internet"}
+{"acronym": "imho", "meaning": "in my humble opinion", "type":"internet"}
+{"acronym": "imo", "meaning": "in my opinion", "type":"internet"}
+{"acronym": "lmao", "meaning": "laughing my ass off", "type":"internet"}
+{"acronym": "lol", "meaning": "laughing out loud", "type":"internet"}
 {"acronym": "nsfw", "meaning": "not safe for work", "type":"internet"}
+{"acronym": "omfg", "meaning": "oh my fucking god", "type":"internet"}
+{"acronym": "omg", "meaning": "oh my god", "type":"internet"}
+{"acronym": "rofl", "meaning": "rolling on the floor laughing", "type":"internet"}
+{"acronym": "rtfm", "meaning": "read the fucking manual", "type":"internet"}
 {"acronym": "sfw", "meaning": "safe for work", "type":"internet"}
 {"acronym": "smh", "meaning": "shaking my head", "type":"internet"}
-{"acronym": "iirc", "meaning": "if I read correctly", "type":"internet"}
 {"acronym": "tbh", "meaning": "to be honest", "type":"internet"}
-{"acronym": "brb", "meaning": "be right back", "type":"internet"}
-{"acronym": "gtg", "meaning": "got to go", "type":"internet"}
-{"acronym": "g2g", "meaning": "good to go", "type":"internet"}
-{"acronym": "omg", "meaning": "oh my god", "type":"internet"}
-{"acronym": "omfg", "meaning": "oh my fucking god", "type":"internet"}
 {"acronym": "wtf", "meaning": "what the fuck", "type":"internet"}
-{"acronym": "lol", "meaning": "laughing out loud", "type":"internet"}
-{"acronym": "rofl", "meaning": "rolling on the floor laughing", "type":"internet"}
-{"acronym": "lmao", "meaning": "laughing my ass off", "type":"internet"}
+
+{"acronym": "cia", "meaning": "central intelligence agency", "type":"politics"}
+{"acronym": "epa", "meaning": "environment protection agency", "type":"politics"}
+{"acronym": "eu", "meaning": "european union", "type":"politics"}
+{"acronym": "fcc", "meaning": "federal communications commission", "type":"politics"}
+{"acronym": "fbi", "meaning": "federal bureau of investigation", "type":"politics"}
+{"acronym": "irs", "meaning": "internal revenue service", "type":"politics"}
+{"acronym": "nasa", "meaning": "national aeronautics and space administration", "type":"politics"}
+{"acronym": "nsa", "meaning": "national security agency", "type":"politics"}
+{"acronym": "nato", "meaning": "north atlantic treaty organization", "type":"politics"}
+{"acronym": "opec", "meaning": "organization of the petroleum exporting countries", "type":"politics"}
+{"acronym": "tsa", "meaning": "transportation security agency", "type":"politics"}
+{"acronym": "un", "meaning": "united nations", "type":"politics"}
+
+{"acronym": "alu", "meaning": "arithmetic logic unit", "type":"technology"}
+{"acronym": "atm", "meaning": "automated teller machine", "type":"technology"}
+{"acronym": "cpu", "meaning": "central processing unit", "type":"technology"}
+{"acronym": "crt", "meaning": "cathode ray tube", "type":"technology"}
+{"acronym": "css", "meaning": "cascading style sheet", "type":"technology"}
+{"acronym": "e3", "meaning": "electronic entertainment expo", "type":"technology"}
+{"acronym": "hdd", "meaning": "hard drive disk", "type":"technology"}
+{"acronym": "html","meaning": "hypertext markup language", "type":"technology"}
+{"acronym": "http","meaning": "hypertext transfer protocol", "type":"technology"}
+{"acronym": "ip",  "meaning": "internet protocol", "type":"technology"}
+{"acronym": "ipv4","meaning": "internet protocol version 4", "type":"technology"}
+{"acronym": "ipv6","meaning": "internet protocol version 6", "type":"technology"}
+{"acronym": "gpu", "meaning": "graphics processing unit", "type":"technology"}
+{"acronym": "gnu", "meaning": "gnu's not unix", "type":"technology"}
+{"acronym": "lcd", "meaning": "liquid crystal display", "type":"technology"}
+{"acronym": "led", "meaning": "light emitting diode", "type":"technology"}
+{"acronym": "oled", "meaning": "organic light emitting diode", "type":"technology"}
+{"acronym": "pci", "meaning": "peripheral component interconnect", "type":"technology"}
+{"acronym": "pin", "meaning": "personal identification number", "type":"technology"}
+{"acronym": "php", "meaning": "hypertext postprocessor", "type":"technology"}
+{"acronym": "ram", "meaning": "random access memory", "type":"technology"}
+{"acronym": "ssh", "meaning": "secure shell", "type":"technology"}
+{"acronym": "ssd", "meaning": "solid state drive", "type":"technology"}
+{"acronym": "ssl", "meaning": "secure socket layer", "type":"technology"}
+{"acronym": "tcp", "meaning": "transmission control protocol", "type":"technology"}
+{"acronym": "tsl", "meaning": "transport layer security", "type":"technology"}
+{"acronym": "usb", "meaning": "universal serial bus", "type":"technology"}
+{"acronym": "udp", "meaning": "user datagram protocol", "type":"technology"}
