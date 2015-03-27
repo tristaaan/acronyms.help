@@ -3,7 +3,7 @@ var database = require('./database');
 var limitedArray = require('./limitedArray');
 
 var app = express();
-var limArray = limitedArray(8);
+var limArray = new limitedArray(8);
 
 app.use(express.static(__dirname + '/../public'));
 
@@ -31,7 +31,7 @@ app.get('/fetch/:expr', function(req, res){
 });
 
 app.get('/recents', function(req, res){
-  res.send(limArray.arr);
+  res.send(limArray.contents);
 });
 
 module.exports = app;

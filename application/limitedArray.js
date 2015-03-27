@@ -1,29 +1,31 @@
-var LimitedArray = function(maxSize) {
-	var my = {};
-
-	my.maxSize = maxSize || 5;
-	my.arr = [];
-
-	my.push = function(el){
-		while (my.arr.length >= my.maxSize){
-			my.arr.shift();
-		}
-		if (unique(el)){
-			my.arr.push(el);
-		}
+var limitedArray = function(size){
+	this.contents = [];
+	this.maxSize = size || 5;
+	return this;
+};
+ 
+Object.defineProperty(
+	limitedArray.prototype, 
+	'length', 
+	{get: function() {
+		return this.contents.length;;
 	}
-
-	my.clear = function(){
-		my.arr = [];
+});
+ 
+limitedArray.prototype.push = function(){
+	if (arguments.length == 0){
+		return;
 	}
-
-	function unique(newEl){
-		return my.arr.every(function(el){
-			return newEl._id != el._id;
-		});
+ 
+	while (this.length + arguments.length > this.maxSize){
+		this.contents.shift();
 	}
-
-	return my;
-}
-
-module.exports = LimitedArray;
+ 
+	for (var i=0; i<arguments.length; i++){
+		this.contents.push(arguments[i]);
+	}
+ 
+	return arguments[arguments.length-1];
+};
+ 
+module.exports = limitedArray;
