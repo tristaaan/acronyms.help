@@ -4,15 +4,13 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "mongoose": "^3.8.24"
-  },
-  "devDependencies": {
     "express": "^4.12.2",
     "mongoose": "^3.8.24"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
-  "author": "",
+  "author": "Tristan Wright",
   "license": "ISC"
 }
