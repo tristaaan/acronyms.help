@@ -1,6 +1,10 @@
 body{
   font-family: sans-serif;
-  background-color: #fdfdfd;
+  background-color: #fcfcfc;
+}
+
+a, a:visited{
+  color: blue;
 }
 
 #query{
@@ -52,6 +56,10 @@ ul li{
   margin: 0;
   padding: .8em 10% .8em 10%;
   border-width: 0px 1px;
+  -webkit-transition: background-color 0.25s linear;
+  -moz-transition: background-color 0.25s linear;
+  -ms-transition: background-color 0.25s linear;
+  transition: background-color 0.25s linear;
 }
 
 .acro-repeat-animate {
@@ -63,6 +71,8 @@ ul li{
 .acro-repeat-animate.ng-enter,
 .acro-repeat-animate.ng-leave {
   -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -ms-transition: all 0.25s linear;
   transition: all 0.25s linear;
 }
 

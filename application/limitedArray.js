@@ -1,6 +1,9 @@
-var limitedArray = function(size){
+/* Maintains an array of objects, if uniqueKey is defined, then a unique array of objects  */
+
+var limitedArray = function(size, uniqueKey){
 	this.contents = [];
 	this.maxSize = size || 5;
+	this.uniqueKey = uniqueKey || false;
 	return this;
 };
  
@@ -16,16 +19,25 @@ limitedArray.prototype.push = function(){
 	if (arguments.length == 0){
 		return;
 	}
- 
-	while (this.length + arguments.length > this.maxSize){
+
+	for (var i=0; i<arguments.length; i++){
+		if (this.uniqueKey && this.unique(arguments[i]) || !this.uniqueKey){
+			this.contents.push(arguments[i]);
+		}
+	}
+
+	while (this.length > this.maxSize){
 		this.contents.shift();
 	}
- 
-	for (var i=0; i<arguments.length; i++){
-		this.contents.push(arguments[i]);
-	}
- 
+
 	return arguments[arguments.length-1];
 };
+
+limitedArray.prototype.unique = function(newEl){
+	var key = this.uniqueKey;
+	return this.contents.every(function(el){
+		return newEl[key].toString() !== el[key].toString(); 
+	});
+}
  
 module.exports = limitedArray;

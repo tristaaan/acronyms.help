@@ -46,7 +46,7 @@ app.controller('queryController', function($scope, fetchService){
 app.directive('smileyInput', function() {
   return {
     restrict: 'A',
-    template: '<input type="text" ng-model="query"><span id="smiley">:-)</span>',
+    template: '<input type="text" ng-model="query" autofocus><span id="smiley">:-)</span>',
     link: function(scope, element, attrs) {
       var input = element.find('input');
       var smiley = element.find('span');

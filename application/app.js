@@ -3,7 +3,7 @@ var database = require('./database');
 var limitedArray = require('./limitedArray');
 
 var app = express();
-var limArray = new limitedArray(8);
+var limArray = new limitedArray(8, '_id');
 
 app.use(express.static(__dirname + '/../public'));
 
@@ -24,7 +24,9 @@ app.get('/fetch/:expr', function(req, res){
       }
       else{
         res.send(data);
-        limArray.push(data[Math.floor(Math.random()*data.length)]);
+        if (data.length > 0){
+          limArray.push(data[Math.floor(Math.random()*data.length)]);
+        }
       }
     });
   }
