@@ -5,6 +5,13 @@ var limitedArray = require('./limitedArray');
 var app = express();
 var limArray = new limitedArray(8, '_id');
 
+var host = process.env.HOST;
+var dbport = process.env.DBPORT;
+var dbname = process.env.DBNAME;
+var username = process.env.USERNAME;
+var pass = process.env.PASSWORD;
+var connection = new database(host, dbport, dbname, username, pass);
+
 app.use(express.static(__dirname + '/../public'));
 
 app.get('/', function(req, res){
@@ -18,7 +25,7 @@ app.get('/fetch/:expr', function(req, res){
     res.send([]);
   }
   else{
-    database.find({acronym: new RegExp('^'+expression, 'i')}, function(error, data){
+    connection.find({acronym: new RegExp('^'+expression, 'i')}, function(error, data){
       if(error){
         console.log(error);
       }
