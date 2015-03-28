@@ -7,6 +7,10 @@ a, a:visited{
   color: blue;
 }
 
+.ng-cloak {
+  display: none !important;
+}
+
 #query{
   display: block;
   width: 400px;

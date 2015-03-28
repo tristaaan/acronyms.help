@@ -11,7 +11,7 @@
     <div ng-controller="queryController">
       <span id="query" model="query" smiley-input></span>
       <ul>
-        <li class="acro-repeat-animate" ng-repeat="acro in acros | filter:query">
+        <li class="acro-repeat-animate ng-cloak" ng-repeat="acro in acros | filter:query">
           <span class="acronym">{{acro.acronym}}</span> <em class="meaning">{{acro.meaning}}</em>
         </li>
       </ul>
