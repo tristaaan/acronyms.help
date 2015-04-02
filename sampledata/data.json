@@ -1,3 +1,4 @@
+{"acronym": "asl", "meaning": "age sex location", "type":"internet"}
 {"acronym": "brb", "meaning": "be right back", "type":"internet"}
 {"acronym": "btw", "meaning": "by the way", "type":"internet"}
 {"acronym": "cu", "meaning": "see you (later)", "type":"internet"}
@@ -44,6 +45,7 @@
 {"acronym": "ip",  "meaning": "internet protocol", "type":"technology"}
 {"acronym": "ipv4","meaning": "internet protocol version 4", "type":"technology"}
 {"acronym": "ipv6","meaning": "internet protocol version 6", "type":"technology"}
+{"acronym": "irc", "meaning": "internet relay chat", "type":"technology"}
 {"acronym": "gpu", "meaning": "graphics processing unit", "type":"technology"}
 {"acronym": "gnu", "meaning": "gnu's not unix", "type":"technology"}
 {"acronym": "lcd", "meaning": "liquid crystal display", "type":"technology"}

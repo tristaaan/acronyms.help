@@ -92,12 +92,17 @@ ul li{
 .acro-repeat-animate.ng-move.ng-move-active,
 .acro-repeat-animate.ng-enter.ng-enter-active {
   opacity:1;
-  padding: .8em 10% .8em 10%;
+  padding: .8em 10%;
   max-height:40px;
 }
 
 .acronym, .meaning{
+  text-align: left;
   text-transform: lowercase;
+}
+
+.meaning{
+  display: inline-block;
 }
 
 ul li:nth-child(even){
@@ -142,7 +147,22 @@ ul li span, ul li em{
 }
 
 footer{
-  position: fixed;
+  width: 100%;
+  text-align: right;
+  position: absolute;
   bottom: 3px;
   right: 5px;
+}
+
+@media screen and (max-width: 400px){
+/*  body{background-color: red;} */
+  input, ul, #query{
+    width: 100%;
+  }
+  input{
+    text-indent: 15%;
+  }
+  ul li{
+    padding: .8em 7.5%;
+  }
 }
