@@ -2,9 +2,10 @@
 Instantly lookup acronyms.
 
 ##Setup
-Make sure you have mongodb running somewhere and:
-
 ```
 npm install
-mongoimport -d db --collection acronyms --file sampledata/data.json
+npm start
 ```
+
+##Contributing
+Pull requests with new acronyms will be gladly merged. When adding them, make sure to maintain proper JSON format and alphabetical ordering by category. While categories are not used on the front-end right now, a category filter might be desirable to have later on.
