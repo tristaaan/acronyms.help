@@ -3,6 +3,18 @@ body{
   background-color: #fcfcfc;
 }
 
+h1, h5{
+  text-align: center;
+}
+
+h1{
+  margin: 0.4em 0 0;
+}
+
+h5{
+  margin: 0.4em 0;
+}
+
 a, a:visited{
   color: blue;
 }
