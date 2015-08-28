@@ -1,30 +1,29 @@
 'use strict';
 
-var app = angular.module('acroSearch', ['ngAnimate']);
+var app = angular.module('acroSearch', ['ngAnimate']),
+  data = require("json!../../sampledata/data.json");
 
 app.factory('fetchService', function($http) {
   var my = {};
-  my.fetch = function(query) {
-    return $http({
-      method: 'GET', 
-      url: '/fetch/' + query
+
+  function pick (src, regexp) {
+    return Object.keys(src).filter(function(el) {
+      if (regexp.test(el)) {
+        return el;
+      }
+    }).map(function(el) {
+      return data[el];
     });
   }
 
-  my.recents = function(){
-    return $http({
-      method: 'GET', 
-      url: '/recents'
-    });
+  my.fetch = function(query) {
+    return pick(data, new RegExp('^' + query));
   }
+
   return my;
 });
 
 app.controller('queryController', function($scope, fetchService){
-
-  fetchService.recents().success(function(res){
-    $scope.acros = res;
-  });
   
   // watch $scope.query, if the first letter changes fetch from the api.
   // any letter after the first can be filtered from the previously fetched results
@@ -36,9 +35,7 @@ app.controller('queryController', function($scope, fetchService){
       $scope.acros = [];
     }
     else if (newVal.length > 0 && newVal[0] != oldVal[0]){
-      fetchService.fetch(newVal).success(function(res){
-        $scope.acros = res;
-      });
+      $scope.acros = fetchService.fetch(newVal);
     }
   });
 });

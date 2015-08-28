@@ -76,12 +76,4 @@ function randomIndex(arr){
   return arr[Math.floor(Math.random()*arr.length)];
 }
 
-function pick (src, regexp) {
-  return src.filter(function(el){
-    if (regexp.test(el.acronym)) {
-      return el;
-    }
-  });
-}
-
 module.exports = app;

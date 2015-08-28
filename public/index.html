@@ -3,30 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
-  <title>Acronyms.Help</title>
+  <title>AreaCodes.Help</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-animate.js"></script>
 </head>
 <body>
-  <h1>acronyms.help</h1>
-  <h5>wtf does bbq mean irl?</h5>
+  <h1>AreaCodes.Help</h1>
+  <h5>what calls come from 999 anyway?</h5>
   <div ng-app="acroSearch">
     <div ng-controller="queryController">
       <span id="query" model="query" smiley-input></span>
       <ul>
         <li class="acro-repeat-animate ng-cloak" ng-repeat="acro in acros | filter:query">
-          <span class="acronym">{{acro.acronym}}</span> <em class="meaning">{{acro.meaning}}</em>
+          <span class="acronym">{{acro.code}}</span> <em class="meaning">{{acro.description}}</em>
         </li>
       </ul>
     </div>
   </div>
-
   <footer>
-    Acronym missing? <a href="https://github.com/tristaaan/acronyms.help/issues" target="_blank">Suggest it here.</a>
+    Area codes scraped from: <a href="http://www.bennetyee.org/ucsd-pages/area.html" target="_blank">here</a>.
   </footer>
-
-  <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js'></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-animate.js"></script>
-  <script src="js/index.js"></script>
-
+  <script src="dist/index.js"></script>
 </body>
 </html>
