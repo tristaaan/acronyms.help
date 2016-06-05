@@ -1,9 +1,12 @@
 'use strict';
+require('angular');
+require('angular-animate');
+require('../css/style.css');
 
 var app = angular.module('acroSearch', ['ngAnimate']),
-  data = require("json!../../sampledata/data.json");
+  data = require('../../sampledata/data.json');
 
-app.factory('fetchService', function($http) {
+app.factory('fetchService', ['$http', function($http) {
   var my = {};
 
   function pick (src, regexp) {
@@ -21,10 +24,9 @@ app.factory('fetchService', function($http) {
   }
 
   return my;
-});
+}]);
 
-app.controller('queryController', function($scope, fetchService){
-  
+app.controller('queryController', ['$scope', 'fetchService', function($scope, fetchService){
   // watch $scope.query, if the first letter changes fetch from the api.
   // any letter after the first can be filtered from the previously fetched results
   // clear the results if $scope.query.length == 0
@@ -33,12 +35,11 @@ app.controller('queryController', function($scope, fetchService){
     oldVal = oldVal || '';
     if (newVal.length == 0){
       $scope.acros = [];
-    }
-    else if (newVal.length > 0 && newVal[0] != oldVal[0]){
+    } else if (newVal.length > 0 && newVal[0] != oldVal[0]){
       $scope.acros = fetchService.fetch(newVal);
     }
   });
-});
+}]);
 
 app.directive('smileyInput', function() {
   return {

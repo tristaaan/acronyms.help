@@ -1,35 +1,35 @@
-body{
+body {
   font-family: sans-serif;
   background-color: #fcfcfc;
 }
 
-h1, h5{
+h1, h5 {
   text-align: center;
 }
 
-h1{
+h1 {
   margin: 0.4em 0 0;
 }
 
-h5{
+h5 {
   margin: 0.4em 0;
 }
 
-a, a:visited{
+a, a:visited {
   color: blue;
 }
 
-.ng-cloak {
+.ng-cloak  {
   display: none !important;
 }
 
-#query{
+#query {
   display: block;
   width: 400px;
   margin: 0 auto;
 }
 
-#smiley{
+#smiley {
   position: relative;
   top: -1.6em;
   left: .75em;
@@ -37,19 +37,14 @@ a, a:visited{
   width: 1em;
   display: block;
   color: gray;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  transform: rotate(0deg);
   transition: transform 0.3s ease;
 }
 
-#smiley.rotate{
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
+#smiley.rotate {
   transform: rotate(90deg);
 }
 
-input{
+input {
   font-size: 1em;
   padding: .5em 0;
   text-indent: 10%;
@@ -61,40 +56,34 @@ input{
   border-color: #d5d5d5;
 }
 
-ul{
+ul {
   padding: 0;
   margin: 0 auto;
   width: 400px;
   list-style-type: none;
 }
 
-ul li{
+ul li {
   margin: 0;
   padding: .8em 10% .8em 10%;
   border-width: 0px 1px;
-  -webkit-transition: background-color 0.25s linear;
-  -moz-transition: background-color 0.25s linear;
-  -ms-transition: background-color 0.25s linear;
   transition: background-color 0.25s linear;
 }
 
-.acro-repeat-animate {
+.acro-repeat-animate  {
   list-style:none;
   box-sizing:border-box;
 }
 
 .acro-repeat-animate.ng-move,
 .acro-repeat-animate.ng-enter,
-.acro-repeat-animate.ng-leave {
-  -webkit-transition: all 0.25s linear;
-  -moz-transition: all 0.25s linear;
-  -ms-transition: all 0.25s linear;
+.acro-repeat-animate.ng-leave  {
   transition: all 0.25s linear;
 }
 
 .acro-repeat-animate.ng-leave.ng-leave-active,
 .acro-repeat-animate.ng-move,
-.acro-repeat-animate.ng-enter {
+.acro-repeat-animate.ng-enter  {
   opacity:0;
   padding: 0 10% 0 10%;
   max-height:0;
@@ -102,63 +91,63 @@ ul li{
 
 .acro-repeat-animate.ng-leave,
 .acro-repeat-animate.ng-move.ng-move-active,
-.acro-repeat-animate.ng-enter.ng-enter-active {
+.acro-repeat-animate.ng-enter.ng-enter-active  {
   opacity:1;
   padding: .8em 10%;
   max-height:40px;
 }
 
-.acronym, .meaning{
+.acronym, .meaning {
   text-align: left;
   text-transform: lowercase;
 }
 
-.meaning{
+.meaning {
   display: inline-block;
 }
 
-ul li:nth-child(even){
+ul li:nth-child(even) {
   border: 1px solid #efefef;
   border-top: none;
   border-bottom: none;
   background-color: white;
 }
 
-ul li:nth-child(odd){
+ul li:nth-child(odd) {
   background-color: #efefef;
   border: 1px solid #efefef;
   border-width: 0px 1px;
 }
 
-ul li:only-child { /* for when there's one result */
+ul li:only-child  { /* for when there's one result */
   border-radius: 4px !important;
   border-width: 0px 1px !important;
 }
 
-ul li:first-child{
+ul li:first-child {
   border-radius: 4px 4px 0 0;
 }
 
-ul li:last-child{
+ul li:last-child {
   border: 1px solid #efefef;
   border-top: none;
   border-radius: 0 0 4px 4px;
 }
 
-ul li:hover{
+ul li:hover {
   background-color: #e5e5e5;
 }
 
-ul li span{
+ul li span {
   display: inline-block;
   width: 20%;
 }
 
-ul li span, ul li em{
+ul li span, ul li em {
   color: #333; /* don't use black */
 }
 
-footer{
+footer {
   width: 100%;
   text-align: right;
   position: absolute;
@@ -166,15 +155,14 @@ footer{
   right: 5px;
 }
 
-@media screen and (max-width: 400px){
-/*  body{background-color: red;} */
-  input, ul, #query{
+@media screen and (max-width: 400px) {
+  input, ul, #query {
     width: 100%;
   }
-  input{
+  input {
     text-indent: 15%;
   }
-  ul li{
+  ul li {
     padding: .8em 7.5%;
   }
 }
